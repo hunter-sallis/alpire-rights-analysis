@@ -1,0 +1,303 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noindex,nofollow">
+<title>Alpire &mdash; Rights Gap Analysis</title>
+<meta property="og:title" content="Alpire — Rights Gap Analysis">
+<meta property="og:description" content="Publishing &amp; mechanical royalty gap analysis of 13 recordings · prepared by Keyman · September 2026">
+<meta property="og:type" content="website"><meta property="og:url" content="https://hunter-sallis.github.io/alpire-rights-analysis/">
+<link rel=preconnect href="https://fonts.googleapis.com"><link rel=preconnect href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel=stylesheet>
+<style>
+:root{--ink:oklch(0.17 0.008 25);--sub:oklch(0.43 0.012 25);--faint:oklch(0.60 0.010 25);--paper:#fff;--cream:oklch(0.985 0.002 25);--cream2:oklch(0.958 0.006 25);--line:oklch(0.89 0.008 25);
+ --acc:oklch(0.56 0.22 28);--acc-dk:oklch(0.48 0.19 28);--acc-soft:oklch(0.965 0.02 28);--ftr:oklch(0.12 0.008 215);
+ --red:#b3382e;--red-soft:#f8ecea;--amber:#8f5b00;--amber-soft:#faf1dd;--green:#22694a;--green-soft:#e7f2ec;--blue:#2d4f8f;--blue-soft:#e9eef7;--grey:#6b7280;--grey-soft:#f1f2f4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 "Manrope",system-ui,-apple-system,Segoe UI,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none;font-weight:600} a:hover{color:var(--acc-dk);text-decoration:underline}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.hdr{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.hdr .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 6px}
+.wm{font:500 25px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;color:var(--acc)}
+.wm-sub{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--sub);margin-top:5px}
+.hdr-r{text-align:right;font:700 9.5px/1.7 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--sub)}
+.badge{display:inline-block;border:1px solid var(--line);color:var(--sub);border-radius:3px;padding:5px 9px;font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
+.navrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 0 8px;flex-wrap:wrap}
+.tabs{display:flex;gap:2px}
+.tab{background:none;border:0;border-bottom:2px solid transparent;padding:10px 14px;font:700 11px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--sub);cursor:pointer}
+.tab[aria-selected=true]{color:var(--acc);border-bottom-color:var(--acc)} .tab:hover{color:var(--ink)}
+.navsel{display:none;padding:9px 12px;border:1px solid var(--line);border-radius:4px;font:700 11px/1 "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase;background:#fff;color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.seg button{background:#fff;border:0;padding:8px 12px;font:700 9.5px/1 "Manrope",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sub);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+main{min-height:60vh}
+.panel{display:none;padding:36px 0 64px} .panel.active{display:block}
+.eyebrow{font:700 10px/1 "Manrope",sans-serif;letter-spacing:.23em;text-transform:uppercase;color:var(--acc);margin:0 0 10px}
+h1{font:500 clamp(34px,4.2vw,50px)/1.06 "Cormorant Garamond",Georgia,serif;letter-spacing:-.025em;margin:0}
+h1 small{display:block;font:500 clamp(17px,2vw,22px)/1.3 "Cormorant Garamond",Georgia,serif;letter-spacing:-.01em;color:var(--sub);margin-top:8px}
+h2{font:500 clamp(24px,2.7vw,32px)/1.15 "Cormorant Garamond",Georgia,serif;letter-spacing:-.02em;margin:0}
+h3{font:500 17px/1.3 "Cormorant Garamond",Georgia,serif;margin:0 0 6px;letter-spacing:-.01em}
+.rule{width:52px;height:2px;background:var(--acc);margin:14px 0 18px}
+.sub{color:var(--sub);font-size:14px} .sub b{color:var(--ink);font-weight:600}
+.faint{color:var(--faint)} .sm{font-size:12.5px;color:var(--sub)}
+.hero{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.hero img{width:200px;height:200px;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+.legal{font:500 13.5px/1.5 "Manrope",sans-serif;color:var(--sub);margin-top:12px} .legal b{color:var(--ink);font-weight:600}
+.finding{margin-top:28px;padding:22px 26px;background:var(--cream);border-left:2px solid var(--acc)}
+.finding p{margin:0;font:500 clamp(17px,1.8vw,21px)/1.45 "Cormorant Garamond",Georgia,serif;letter-spacing:-.005em}
+.finding .n{margin-top:10px;font-size:12.5px;color:var(--sub)}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:28px}
+.kpi{padding:20px 16px;border-left:1px solid var(--line);background:none;border-top:0;border-bottom:0;border-right:0;text-align:left;cursor:pointer;transition:background .12s}
+.kpi:first-child{border-left:0} .kpi:hover{background:var(--cream)}
+.kpi .l{font:700 9px/1.4 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);min-height:26px}
+.kpi .v{font:500 34px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:-.025em;margin:8px 0 6px;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:11.5px;color:var(--sub);line-height:1.45}
+.grid2{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;margin-top:34px}
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat{display:block;background:#fff;border:1px solid var(--line);border-radius:5px;padding:16px 16px 14px;text-align:left;cursor:pointer;width:100%}
+.cat:hover{border-color:var(--ink)} .cat>span,.cat .bt{display:block}
+.cat .n{font:500 28px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:-.03em;margin-bottom:6px;font-variant-numeric:tabular-nums}
+.cat .t{font-weight:700;font-size:13.5px;line-height:1.3} .cat .d{font-size:11.5px;color:var(--sub);line-height:1.45;margin-top:5px}
+.cat .k{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.18em;color:var(--faint);text-transform:uppercase;margin-right:6px}
+.bt{height:4px;background:var(--grey-soft);margin-top:8px;overflow:hidden;border-radius:2px} .bt i{display:block;height:100%}
+.tone-red .n{color:var(--red)} .tone-amber .n{color:var(--amber)} .tone-blue .n{color:var(--blue)} .tone-green .n{color:var(--green)}
+.bt i.red{background:var(--red)} .bt i.amber{background:var(--amber)} .bt i.blue{background:var(--blue)} .bt i.green{background:var(--green)}
+.expo{display:flex;height:14px;border-radius:3px;overflow:hidden;margin-top:12px;background:var(--grey-soft)} .expo i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:10px;font-size:12px;color:var(--sub)} .legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--grey)}
+.legend .A:before{background:var(--red)} .legend .B:before{background:var(--blue)} .legend .C:before{background:#6d86bf} .legend .D:before{background:var(--amber)} .legend .E:before{background:var(--green)}
+.pill{display:inline-block;font:700 9px/1.4 "Manrope",sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:3px;white-space:nowrap}
+.pill.red{color:var(--red);background:var(--red-soft)} .pill.amber{color:var(--amber);background:var(--amber-soft)} .pill.green{color:var(--green);background:var(--green-soft)} .pill.grey{color:var(--grey);background:var(--grey-soft)} .pill.blue{color:var(--blue);background:var(--blue-soft)}
+.pri{display:inline-block;font:700 9px/1.4 "Manrope",sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:3px;white-space:nowrap;border:1px solid var(--line);color:var(--sub);background:#fff}
+.pri.p1{border-color:var(--ink);background:var(--ink);color:#fff} .pri.p2{border-color:var(--sub);color:var(--ink)} .pri.p3{color:var(--sub)} .pri.p0{color:var(--green);border-color:var(--green-soft);background:var(--green-soft)}
+.rd{display:inline-block;font:700 9px/1.4 "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--line);border-radius:3px;color:var(--sub);white-space:nowrap;background:#fff}
+.ev{display:inline-block;font:700 8.5px/1.3 "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:3px 6px;border-radius:3px;white-space:nowrap}
+.ev.fact{color:var(--green);background:var(--green-soft)} .ev.gap{color:var(--red);background:var(--red-soft)} .ev.verify{color:var(--amber);background:var(--amber-soft)}
+.dims{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 4px}
+.dim{border:1px solid var(--line);border-radius:5px;padding:10px 12px;background:#fff}
+.dim .dl{font:700 8.5px/1.3 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--sub)}
+.dim .dv{display:inline-block;margin-top:6px;font:700 10px/1.3 "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:3px}
+.dim .dn{font-size:11.5px;color:var(--sub);margin-top:6px;line-height:1.4}
+.g{color:var(--green);background:var(--green-soft)} .y{color:var(--amber);background:var(--amber-soft)} .r{color:var(--red);background:var(--red-soft)} .b{color:var(--blue);background:var(--blue-soft)} .n{color:var(--grey);background:var(--grey-soft)}
+.dimline{display:inline-flex;gap:4px;flex-wrap:wrap} .dimline span{font:700 8px/1.2 "Manrope",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 5px;border-radius:3px;white-space:nowrap}
+.dv.tag{font:700 9px/1.3 "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 6px;border-radius:3px;display:inline-block}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font:700 9px/1.3 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--sub);padding:10px 10px;border-bottom:1px solid var(--line);background:var(--cream)}
+td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13.5px}
+.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:5px}
+tr.click{cursor:pointer} tr.click:hover td{background:var(--cream)}
+#topTbl td:first-child{min-width:170px} #topTbl td.why{color:var(--sub);font-size:12.5px;min-width:220px}
+.acc{border:1px solid var(--line);border-radius:5px;background:#fff;margin-bottom:10px}
+.acc>.ah{display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center;width:100%;background:none;border:0;padding:14px 16px;text-align:left;cursor:pointer}
+.acc>.ah:hover{background:var(--cream)} .acc>.ah .car{color:var(--acc);font-size:11px;transition:transform .15s;width:12px}
+.acc[open]>.ah .car{transform:rotate(90deg)} .acc>.ab{display:none;border-top:1px solid var(--line);padding:12px 16px 16px;background:var(--cream)} .acc[open]>.ab{display:block}
+.acc .cnt{font:700 12px/1 "Manrope",sans-serif;letter-spacing:.06em;color:var(--sub);white-space:nowrap;font-variant-numeric:tabular-nums} .acc .cnt b{font:500 18px/1 "Cormorant Garamond",Georgia,serif;color:var(--ink);letter-spacing:-.02em}
+.acc.ok{border-color:var(--green)} .acc.ok>.ah{background:#f5faf7}
+.rows{display:block;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#fff}
+.row{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;align-items:center;width:100%;padding:11px 14px;border:0;border-top:1px solid var(--line);background:#fff;text-align:left;cursor:pointer}
+.row:first-child{border-top:0} .row:hover{background:var(--cream)}
+.row .t{font-weight:700} .row .a{font-size:12px;color:var(--sub)} .row .p{font-variant-numeric:tabular-nums;color:var(--sub);font-size:13px;min-width:88px;text-align:right} .row .car{color:var(--acc);font-size:11px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:16px 0 12px}
+input[type=search],select.f{padding:9px 12px;border:1px solid var(--line);border-radius:4px;font:inherit;font-size:13px;background:#fff;color:var(--ink)}
+input[type=search]{flex:1 1 260px;min-width:200px} input[type=search]:focus{outline:none;border-color:var(--acc)} select.f{max-width:230px}
+.count{font:700 11px/1.4 "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin:8px 0 10px} .count b{color:var(--ink)}
+.pager{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.pager button{background:#fff;border:1px solid var(--line);border-radius:4px;padding:7px 11px;font:700 11px/1 "Manrope",sans-serif;cursor:pointer;color:var(--sub)}
+.pager button[aria-current=true]{background:var(--ink);color:#fff;border-color:var(--ink)} .pager button:disabled{opacity:.4;cursor:default}
+.chip{background:#fff;border:1px solid var(--line);border-radius:4px;padding:7px 11px;font:700 9.5px/1 "Manrope",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--sub);cursor:pointer}
+.chip.s{font:600 11px/1.2 "Manrope",sans-serif;letter-spacing:0;text-transform:none;color:var(--ink);padding:5px 8px}
+.note{border-left:2px solid var(--line);padding:14px 18px;background:var(--cream2);font-size:12.5px;color:var(--sub)} .note b{color:var(--ink)}
+.card{background:#fff;border:1px solid var(--line);border-radius:5px;padding:18px 20px}
+details.m{border:1px solid var(--line);border-radius:5px;padding:12px 16px;background:#fff;font-size:13px;color:var(--sub)} details.m summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:13px} details.m table{margin-top:10px} details.m td{font-size:12.5px;padding:8px 8px} details.m td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+.mrem{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px} .mrem span{font:700 9.5px/1 "Manrope",sans-serif;letter-spacing:.06em;padding:6px 8px;border:1px solid var(--line);border-radius:3px;color:var(--sub);background:#fff} .mrem span b{color:var(--ink);letter-spacing:0;margin-left:4px}
+ol.plan{list-style:none;padding:0;margin:0;counter-reset:s}
+ol.plan>li{counter-increment:s;position:relative;padding:0 0 22px 56px;border-bottom:1px solid var(--line);margin-bottom:22px}
+ol.plan>li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;font:500 30px/1 "Cormorant Garamond",Georgia,serif;color:var(--acc);letter-spacing:-.02em}
+ol.plan>li:last-child{border-bottom:0} ol.plan h3{font-size:20px} ol.plan p{margin:6px 0 0;color:var(--sub);font-size:13.5px}
+ol.wf{margin:10px 0 0;padding-left:20px;font-size:13.5px;color:var(--sub)} ol.wf li{margin-bottom:6px;padding-left:4px} ol.wf b{color:var(--ink)}
+ol.find{list-style:none;padding:0;margin:0;counter-reset:f} ol.find li{counter-increment:f;position:relative;padding:0 0 16px 44px;font-size:13.5px;color:var(--sub)} ol.find li b{color:var(--ink)}
+ol.find li:before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:2px;font:700 11px/1 "Manrope",sans-serif;color:var(--acc)}
+ul.docs{margin:0;padding-left:18px;font-size:13.5px;color:var(--sub)} ul.docs li{margin-bottom:6px}
+.songs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px} .songs button{background:#fff;border:1px solid var(--line);border-radius:3px;padding:6px 9px;font:600 12px/1.2 "Manrope",sans-serif;color:var(--ink);cursor:pointer;text-align:left} .songs button:hover{border-color:var(--ink)} .songs button span{color:var(--faint);font-weight:500}
+.det h4{font:700 9.5px/1.4 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin:20px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)} .det h4:first-child{margin-top:0} .det p{margin:0 0 8px;font-size:13.5px}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:5px 12px;font-size:13px} .kv dt{color:var(--sub);font-weight:600} .kv dd{margin:0}
+.work{border-left:2px solid var(--line);padding-left:12px;margin:10px 0} .wt{font:500 15px/1.3 "Cormorant Garamond",Georgia,serif} .wp{margin:4px 0 0;padding-left:18px;font-size:12.5px;color:var(--sub)}
+.flag{font:700 8.5px/1 "Manrope",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:4px 6px;border-radius:3px;margin-left:5px;display:inline-block} .flag.off{color:var(--red);background:var(--red-soft)} .flag.neu{color:var(--sub);background:var(--grey-soft)} .flag.amb{color:var(--amber);background:var(--amber-soft)}
+.mine{font:700 8.5px/1 "Manrope",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:3px 5px;border-radius:3px}
+.evrow{border:1px solid var(--line);border-radius:5px;padding:9px 12px;font-size:12.5px;margin-top:6px;background:#fff} .evrow b{color:var(--ink)} .evrow .src{color:var(--sub);margin-top:3px}
+.flags li{margin-bottom:6px;font-size:13px}
+details.evd summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--acc)} details.evd ul{padding-left:18px;font-size:12.5px;color:var(--sub)}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(680px,100%);background:#fff;border-left:1px solid var(--line);box-shadow:-12px 0 32px rgba(11,18,32,.12);transform:translateX(102%);transition:transform .2s;z-index:50;display:flex;flex-direction:column}
+.drawer.open{transform:none} .drawer .dh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)} .drawer .db{overflow:auto;padding:16px 20px 40px}
+.x{background:none;border:1px solid var(--line);border-radius:4px;padding:6px 10px;cursor:pointer;font-weight:700}
+.scrim{position:fixed;inset:0;background:rgba(11,18,32,.3);z-index:40;display:none} .scrim.on{display:block}
+.tech{display:none} body.mode-tech .tech{display:initial} body.mode-tech dl.tech,body.mode-tech div.tech,body.mode-tech section.tech,body.mode-tech li.tech,body.mode-tech p.tech,body.mode-tech details.tech{display:block} body.mode-tech span.tech{display:inline} body.mode-tech th.tech,body.mode-tech td.tech{display:table-cell} body.mode-tech select.tech,body.mode-tech button.tech{display:inline-block}
+body.mode-tech .exec-only{display:none}
+footer{background:var(--ftr);color:#c9ced8;padding:34px 0} footer .wm{color:#fff} footer .wm-sub{color:#9aa3b2} footer .fs{font-size:12px;color:#9aa3b2;max-width:900px;margin-top:14px;line-height:1.6}
+.hide{display:none!important}
+@media(max-width:1000px){.catgrid{grid-template-columns:repeat(3,1fr)} .kpis{grid-template-columns:repeat(3,1fr)} .kpi:nth-child(3n+1){border-left:0} .kpi:nth-child(n+4){border-top:1px solid var(--line)} .grid2{grid-template-columns:1fr} .dims{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.catgrid{grid-template-columns:1fr} .tabs{display:none} .navsel{display:block} .kpis{grid-template-columns:repeat(2,1fr)} .kpi:nth-child(3n+1){border-left:1px solid var(--line)} .kpi:nth-child(2n+1){border-left:0} .kpi:nth-child(n+3){border-top:1px solid var(--line)}
+ .hero{grid-template-columns:1fr} .hero img{width:120px;height:120px} .hdr .top{flex-direction:column;align-items:flex-start;gap:6px} .hdr-r{text-align:left} .row{grid-template-columns:1fr auto} .row .pri,.row .rd{display:none} .row .p{min-width:0}
+ .acc>.ah{grid-template-columns:auto 1fr auto} .acc>.ah .cnt2{display:none} .kv{grid-template-columns:1fr} .kv dt{margin-top:6px} th,td{font-size:12.5px;padding:8px} .drawer{width:100%} .dims{grid-template-columns:1fr} ol.plan>li{padding-left:44px}}
+@media print{.hdr,.drawer,.scrim,.tools,.pager,footer{display:none!important} .panel{display:block!important;page-break-after:always} body{font-size:12px} a{color:inherit}}
+
+.kpis{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero img{width:150px;height:150px}}
+</style></head><body>
+<header class=hdr><div class="wrap top">
+<div><div class=wm>KEYMAN</div><div class=wm-sub>Publishing Administration</div></div>
+<div class=hdr-r>Rights Gap Analysis<br><span class=badge>Draft &middot; 2026-09-07</span></div>
+</div></header>
+<main class=wrap>
+<section class=panel style="display:block">
+<div class=hero>
+<img src="hero.jpg" alt="Alpire">
+<div><p class=eyebrow>Prepared by Keyman for Alpire</p>
+<h1>Alpire<small>Publishing &amp; mechanical rights gap analysis — 13 recordings, 7,520,749 measured plays</small></h1>
+<div class=rule></div>
+<p class=legal>Writer name in label metadata: <b>Alejandro Pirela</b> · Primary label: <b>No Respeto LLC</b> · Sources: The MLC public search, Deezer catalog &amp; label credits, Spotify play counts. Registry data as at 2026-09-07.</p>
+</div></div>
+
+<div class=finding><p>Across the MLC data reviewed, no writer identity for Alejandro Pirela was located, and no publishing or administration collection claim attributable to his writer interest was identified on any composition in this catalog.</p>
+<div class=n>7,520,749 plays sit on recordings for which no MLC composition record was identified. Streams are shown as plays associated with the recordings, never as an entitlement figure.</div></div>
+
+<div class=kpis>
+<div class=kpi><div class=l>Recordings reviewed</div><div class=v>13</div><div class=d>10 own releases · 3 guest appearances</div></div>
+<div class=kpi><div class=l>No MLC work identified</div><div class=v style="color:var(--red)">12</div><div class=d>92.3% of the catalog · tested by ISRC, artist and exact title</div></div>
+<div class=kpi><div class=l>Works where he is a registered writer</div><div class=v style="color:var(--red)">0</div><div class=d>The one linked work lists three other writers</div></div>
+<div class=kpi><div class=l>Attributable collection claims</div><div class=v style="color:var(--red)">0</div><div class=d>No publisher or administrator naming his interest was identified</div></div>
+</div>
+
+<h2 style="margin-top:44px">Client collection attribution</h2><div class=rule></div>
+<div class=card>
+<table><tr><td><b>Compositions in catalog</b></td><td class=num>13 unique compositions across 13 recordings</td></tr>
+<tr><td><b>Writer interest evidenced in registry data</b></td><td class=num>0</td></tr>
+<tr><td><b>Writer interest credited in label metadata</b></td><td class=num>5 of 13 (+1 nickname-only)</td></tr>
+<tr><td><b>Recordings with no writer credit delivered to him</b></td><td class=num>7</td></tr>
+<tr><td><b>MLC collection claims attributable to his interest</b></td><td class=num>0</td></tr>
+<tr><td><b>Plays associated with these recordings</b></td><td class=num>7,520,749</td></tr></table>
+<p class=sm style="margin:14px 0 0">Attribution is established from registry evidence only. Label metadata credits are recorded separately because they are not registry evidence and do not establish entitlement. Exact entitlement within any composition is to be determined from split documentation. Whether he is in fact receiving royalties cannot be established from public data — that is confirmed from his own PRO and MLC accounts at onboarding.</p>
+</div>
+
+<h2 style="margin-top:44px">Key findings</h2><div class=rule></div>
+<div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>No writer identity was located at The MLC.</b></span><span class="pill red">01</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">The MLC writer registry was searched across three name spellings — ALEJANDRO PIRELA, PIRELA ALEJANDRO and ALEJANDRO JOSE PIRELA — scanning the top 400 ranked records for each. No writer record for Alejandro Pirela was located. A control search on two names known to exist in the registry (Nelson Zapata, Josue Cedeno) returned both on the first page, which confirms the search surfaces an exact name when one is there. A writer identity is the object every publishing claim attaches to; until one exists, there is nothing at The MLC for a claim to be made against.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>12 of 13 recordings have no MLC work identified.</b></span><span class="pill red">02</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">Each recording was tested three ways: by ISRC, by recording artist, and by exact composition title. Where works sharing a catalog title do exist at The MLC — QUE COMIENCE LA FIESTA, FLAUTA, TAKATE, CALCULO, LENTO — every one carries different registered writers and different recording artists. None is his composition. This is a registration gap, not a matching gap: there is no composition record to attach these recordings to.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>Que Comience La Fiesta carries 7,341,358 plays — 97.6% of measured catalog streams — with no MLC work identified.</b></span><span class="pill red">03</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">This single recording accounts for almost the entire measured streaming footprint of the catalog. Label metadata credits DAVINSON LOAIZA and Alexis Page as writers and does not credit Alejandro Pirela. Whatever his interest in this composition is, it is not documented in the label metadata and not registered anywhere we can see. Establishing who wrote it, and in what shares, is the single highest-priority item in this catalog.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>25 HORAS: the recording is attached to a third party&#x27;s composition.</b></span><span class="pill blue">04</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">ISRC QZZ7T2503490 is linked to MLC work 2E0PHQ “25 HORAS (LIVE)”, which is 100% claimed — El Caiman Music Publishing (administered by Lemont Right Management) 50% and TuneCore Publishing 50% — with registered writers Nelson Zapata, Josue Cedeno and Tabare Cedeno. Alpire is not a listed writer on it. The label&#x27;s own metadata for the release credits “Proyecto Uno” alongside Alejandro Pirela and Junior Medina, which is consistent with the track being a cover or version of the Proyecto Uno composition. Two readings are possible and both need documentation before anything is asserted: either the recording is a version of an existing composition and the declared Pirela/Medina credit reflects new material that has never been registered, or the credit is a label metadata error. Separately, the primary Proyecto Uno record appears at The MLC as work T1988C “25 HORAS” (100% claimed, 208 recordings attached) — his recording sits on the “(LIVE)” record rather than that one, which is itself a linkage question to raise.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>Label metadata credits him on 5 of 13 tracks and omits him from 8.</b></span><span class="pill amber">05</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">Alejandro Pirela (or “Alejandro J Pirela”) appears as a composer on 25 HORAS, hoy afro, Takate, Lento and Cal(culo). He is absent from the writer metadata on Que Comience La Fiesta, Almighty Aletoso, Flauta, Mujer Secreta, Entregarte El Corazón, Venezuela Pa La Luna, BOW BOW and el que no baila. Label credits are not registry evidence and do not establish entitlement — but they are the raw material a registration is built from, and this inconsistency has to be resolved from split documentation before any filing.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>Several releases carry placeholder or non-legal writer metadata.</b></span><span class="pill amber">06</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">VENEZUELA PA LA LUNA was delivered with the composer string “joes (no hizo nada)” — literally “didn&#x27;t do anything”. “el que no baila nO ESTa eN nAH” carries “el alpi brou”, a nickname rather than a legal name. BOW BOW (Mueve el Culo) was delivered with no composer metadata at all. Registries match on legal names and IPI numbers; joke strings and nicknames cannot be matched to a writer identity and will not carry a claim.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>One release sits outside the No Respeto pipeline.</b></span><span class="pill blue">07</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">12 of 13 recordings are delivered under No Respeto LLC. BOW BOW (Mueve el Culo) — 28,808 plays — sits on La Clinica Records&#x27; compilation “Medicina, Vol. 3”, a third-party release whose registration and metadata path is outside No Respeto&#x27;s control. Any correction on that track has to be routed through La Clinica Records.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>The recording-side identity is clean.</b></span><span class="pill green">08</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">There is a single Alpire artist profile on Spotify with no duplicate or fragmented profiles, and the catalog resolves cleanly to 13 unique ISRCs across own releases and guest appearances. That is a real asset: registration work will not first have to untangle a split artist identity. Note that “Kevin Alpirez” is a distinct artist and a name-collision risk to watch in registry searching.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>PRO affiliation has not been established and is a prerequisite.</b></span><span class="pill amber">09</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">BMI Songview was not searched in this pass. Alpire&#x27;s catalog is Latin/Venezuelan, and the relevant society may be SACVEN, SGAE or another CISAC society rather than BMI or ASCAP. Confirming which society he is affiliated with — and obtaining his IPI number — is the prerequisite step: the IPI is what allows a writer identity to be created and matched, and the ISWC that follows from a PRO registration is what The MLC matches compositions on.</p></div></div><div class="acc" open><div class="ah" style="cursor:default"><span class="car" style="visibility:hidden">▸</span><span><b>The master side is not covered by this report.</b></span><span class="pill grey">10</span><span></span></div><div class="ab" style="display:block"><p style="margin:0;font-size:13.5px;color:var(--sub);line-height:1.65">This analysis covers the composition (publishing / mechanical) side only. SoundExchange and the neighbouring-rights side of these recordings are a separate review, and one worth running given that 7.5M plays sit on recordings released through a small independent label.</p></div></div>
+
+<h2 style="margin-top:44px">Catalog</h2><div class=rule></div>
+<div class=tools><input type=search id=q placeholder="Filter by song or ISRC…">
+<select class=f id=fs><option value="">All statuses</option><option value="nowork">No MLC work identified</option><option value="work">MLC work exists</option></select></div>
+<div class=count id=cnt></div>
+<div class=tblwrap><table id=tbl><thead><tr><th>Song</th><th>ISRC</th><th class=num>Plays</th><th>MLC status</th><th>Label writer credit</th><th>Links</th></tr></thead>
+<tbody><tr class="r" data-t="que comience la fiesta qzhz62246836" data-s="nowork">
+<td><b>Que Comience La Fiesta</b><div class="sm">Alpire · 2022-05-21 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> DAVINSON LOAIZA, Alexis Page</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZHZ62246836</code></td>
+<td class="num">7,341,358</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/1zByDmL92TX4pAnKP43LnY" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/1762099967" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="takate se6hn2071197" data-s="nowork">
+<td><b>Takate</b><div class="sm">Alpire, Medina · 2020-07-10 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Alejandro Pirela</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">SE6HN2071197</code></td>
+<td class="num">52,714</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev fact">Credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/67Tn4J8gJSb4OvMLZAV700" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/2275586567" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="almighty aletoso qzhn82126860" data-s="nowork">
+<td><b>Almighty Aletoso</b><div class="sm">Alpire, Joe$ · 2021-05-20 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Alejandro Mosqueda Paz</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZHN82126860</code></td>
+<td class="num">41,170</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/14REUAr31gbqcnhdMcIx2w" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/1380103382" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="flauta qzda51963141" data-s="nowork">
+<td><b>Flauta</b><div class="sm">Alpire, Joe$ · 2019-02-04 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Joel Garcia</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZDA51963141</code></td>
+<td class="num">31,842</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/5qR4L1mkmEGtQgBvVxFPWK" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/628131102" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="bow bow (mueve el culo) usuyg1356968" data-s="nowork">
+<td><b>BOW BOW (Mueve el Culo)</b> <span class="pri p3">Guest appearance</span><div class="sm">Alpire · 2021-02-12 · La Clinica Records</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> — none delivered —</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">USUYG1356968</code></td>
+<td class="num">28,808</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/3o47mCFXwO7KRoREeNODFp" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/1395221992" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="entregarte el corazón (feat. wlaid &amp; none lowfi) qztaw2226001" data-s="nowork">
+<td><b>Entregarte El Corazón (feat. Wlaid &amp; None Lowfi)</b><div class="sm">Alpire, WLAID, None Lowfi · 2022-11-04 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Sandra Vargas Angarita</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZTAW2226001</code></td>
+<td class="num">7,780</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/38bAzFAscxeKLRxu2XrooN" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/1999430577" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="lento (feat. medina! &amp; aaar) qztat2316682" data-s="nowork">
+<td><b>Lento (feat. Medina! &amp; Aaar)</b><div class="sm">Alpire, Medina!, Aaar · 2023-08-27 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Alejandro Pirela</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZTAT2316682</code></td>
+<td class="num">5,461</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev fact">Credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/7rXCc2NAvpGSjd5eahlBBi" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/2428920055" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="hoy afro qztb22387569" data-s="nowork">
+<td><b>hoy afro</b><div class="sm">Alpire · 2023-10-01 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Alejandro Pirela</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZTB22387569</code></td>
+<td class="num">4,102</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev fact">Credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/3zle8ZeWNG9GX7NvNl01P5" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/2468761905" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="mujer secreta qzwfe2367603" data-s="nowork">
+<td><b>MUJER SECRETA</b> <span class="pri p3">Guest appearance</span><div class="sm">No Respeto, Alpire · 2023-11-16 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Joel Garcia, Junior Medina</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZWFE2367603</code></td>
+<td class="num">3,205</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/4bxpU0shVLvXtuXLxABRuS" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/2545582871" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="cal(culo) (feat. alpire, joe$, medina! &amp; ronny leon) qzhn52361174" data-s="nowork">
+<td><b>Cal(culo) (feat. Alpire, Joe$, Medina! &amp; Ronny Leon)</b> <span class="pri p3">Guest appearance</span><div class="sm">No Respeto, Alpire, Joe$, Medina!, Ronny Leon · 2023-03-30 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Alejandro J Pirela</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZHN52361174</code></td>
+<td class="num">1,698</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev fact">Credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/3p1cQd5Q0KuNqkis5ncm2w" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/2215790397" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="el que no baila no esta en nah qzmep2514743" data-s="nowork">
+<td><b>el que no baila nO ESTa eN nAH</b><div class="sm">Alpire · 2025-04-14 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> el alpi brou</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZMEP2514743</code></td>
+<td class="num">1,437</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev verify">Nickname only</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/0rc8FYlROWeWYsWQzC6qqN" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/3323510381" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="venezuela pa la luna qzz792445369" data-s="nowork">
+<td><b>VENEZUELA PA LA LUNA</b><div class="sm">Alpire · 2024-11-25 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> El Medina, joes (no hizo nada)</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZZ792445369</code></td>
+<td class="num">1,174</td>
+<td><span class="pill red">No MLC work</span></td>
+<td><span class="ev gap">Not credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/2grcTabbvuG7mhovP37Z86" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/3094724011" target="_blank" rel="noopener">Deezer</a></td></tr><tr class="r" data-t="25 horas (feat. medina!) qzz7t2503490" data-s="work">
+<td><b>25 HORAS (feat. Medina!)</b><div class="sm">Alpire, Medina! · 2025-09-10 · No Respeto LLC</div>
+<div class="sm" style="margin-top:5px"><span class="k" style="font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:9px;color:var(--faint)">Label writers</span> Proyecto Uno, Alejandro Pirela, Junior Medina</div><div class="sm" style="margin-top:6px">Linked to MLC work <b>2E0PHQ</b> “25 HORAS (LIVE)” · 100% claimed · registered writers: NELSON ZAPATA, JOSUE CEDENO, TABARE CEDENO · EL CAIMAN MUSIC PUBLISHING (adm LEMONT RIGHT MANAGEMENT) 50% | TUNECORE PUBLISHING 50%</div></td>
+<td style="white-space:nowrap"><code style="font-size:12px">QZZ7T2503490</code></td>
+<td class="num">&lt;1,000</td>
+<td><span class="pill blue">Not a listed writer</span></td>
+<td><span class="ev fact">Credited</span></td>
+<td class="sm" style="min-width:150px"><a href="https://open.spotify.com/track/2G7LL3umARVvBsr49KrSsP" target="_blank" rel="noopener">Spotify</a> · <a href="https://www.deezer.com/track/3545275781" target="_blank" rel="noopener">Deezer</a> · <a href="https://portal.themlc.com/catalog/work/955619097" target="_blank" rel="noopener">MLC 2E0PHQ</a></td></tr></tbody>
+<tfoot><tr><th>Total</th><th></th><th class=num>7,520,749</th><th></th><th></th><th></th></tr></tfoot></table></div>
+
+<h2 style="margin-top:44px">What happens next</h2><div class=rule></div>
+<ol class=plan>
+<li><h3>Confirm identity and accounts</h3><p>Establish which PRO he is affiliated with (SACVEN, SGAE, BMI or another CISAC society), obtain his IPI number, and confirm whether MLC and PRO accounts already exist in his name. Nothing is filed under a writer identity that has not been confirmed.</p></li>
+<li><h3>Verify splits on the priority compositions</h3><p>Starting with Que Comience La Fiesta, then Takate, Almighty Aletoso and Flauta. For each we need whatever exists in writing — a split sheet, producer agreement, beat licence, or even a message where the split was agreed. Named counterparties: Davinson Loaiza and Alexis Page, Joel Garcia, Alejandro Mosqueda Paz, Junior Medina.</p></li>
+<li><h3>Resolve the 25 HORAS record</h3><p>Determine whether the track is a version of the Proyecto Uno composition and, if so, whether the Pirela/Medina credit reflects new material. This is a reconciliation matter against existing claimed works, handled separately from ordinary registration work.</p></li>
+<li><h3>Correct the delivery metadata</h3><p>Replace placeholder and nickname composer strings with legal names and IPI numbers at the distributor, so future deliveries carry matchable writer data.</p></li>
+<li><h3>Register, then attach</h3><p>Once identity is confirmed and splits are documented, register the compositions — PRO first where no registration exists — and attach the recordings. A composition moves to ready-to-file only when its evidence is complete.</p></li>
+</ol>
+
+<div class=note style="margin-top:34px"><b>Basis and limits.</b> This is a draft analysis prepared from public registry and DSP data. It establishes what is registered, what is claimed, and what is attributable — it does not and cannot establish actual payment or royalty flow, which is visible only inside his own PRO and MLC accounts. No filing, amendment or claim has been made at any registry on his behalf. Keyman Publishing LLC · admin@keymanpublishing.com</div>
+</section></main>
+<script>
+const rows=[...document.querySelectorAll('#tbl tbody tr')],q=document.getElementById('q'),fs=document.getElementById('fs'),cnt=document.getElementById('cnt');
+function upd(){const t=q.value.toLowerCase().trim(),s=fs.value;let n=0;
+rows.forEach(r=>{const ok=(!t||r.dataset.t.includes(t))&&(!s||r.dataset.s===s);r.style.display=ok?'':'none';if(ok)n++;});
+cnt.innerHTML='Showing <b>'+n+'</b> of <b>'+rows.length+'</b> recordings';}
+q.addEventListener('input',upd);fs.addEventListener('change',upd);upd();
+</script></body></html>
