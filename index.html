@@ -144,6 +144,9 @@ footer{background:var(--ftr);color:#c9ced8;padding:34px 0} footer .wm{color:#fff
 @media print{.hdr,.drawer,.scrim,.tools,.pager,footer{display:none!important} .panel{display:block!important;page-break-after:always} body{font-size:12px} a{color:inherit}}
 
 .kpis{grid-template-columns:repeat(4,1fr)}
+.joinlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.joinlinks a{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:10px 14px;font:700 10px/1.1 "Manrope",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);background:#fff}
+.joinlinks a:hover{border-color:var(--acc);background:var(--acc-soft);color:var(--acc-dk);text-decoration:none}
 .fnd .ah{width:100%} .fnd .fh{font-weight:700;font-size:14px;line-height:1.4}
 .fnd .fmore{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
 .fnd[open] .fmore{visibility:hidden}
@@ -316,6 +319,12 @@ footer{background:var(--ftr);color:#c9ced8;padding:34px 0} footer .wm{color:#fff
 <li><h3>Confirm your society — and join one if you have not</h3>
 <p>This is the first step, because it governs everything else. We searched BMI and ASCAP and found no registration in your name, so either you are affiliated with a society outside the United States, or you are not affiliated anywhere yet. Tell us which, and if you already have a society, send us your <b>IPI number</b> — it is the number that identifies you as a writer everywhere in the world.</p>
 <p><b>If you are not affiliated yet, ASCAP is the cheaper way in.</b> As a new member, joining as <b>Writer &amp; Publisher together is free</b>. Applying as a writer alone is also free, but adding the publisher side later costs <b>$50</b> — so do both in the same application. This matters more than the $50: performance royalties are split into a writer share and a publisher share, and without a publisher account the publisher half of your own songs has nowhere to go. <b>BMI</b> charges a one-time application fee for writers and a larger one for publishers, shown at the final step of their application; check their current amounts before deciding.</p>
+<div class=joinlinks>
+<a href="https://www.ascap.com/join" target="_blank" rel="noopener">ASCAP — Writer &amp; Publisher · free</a>
+<a href="https://join.bmi.com/#/writer" target="_blank" rel="noopener">BMI — songwriter application</a>
+<a href="https://join.bmi.com/#/publisher" target="_blank" rel="noopener">BMI — publisher application</a>
+</div>
+<p class=sm style="margin-top:10px">On the ASCAP form choose <b>New Member</b>, then the <b>Writer &amp; Publisher</b> option — that is the one that is free. Selecting <b>Writer</b> alone is also free, but you would then pay $50 to add the publisher side later.</p>
 <p class=sm><b>Two things to know before you apply.</b> You can only belong to one U.S. performing rights organisation at a time — if you are already with a society, switching requires a release letter from your current one before you can join another. And if you are already affiliated abroad, joining a U.S. society is a real decision rather than a formality; talk to us first so we do not create a second identity that competes with the one you already have.</p></li>
 
 <li><h3>Verify the splits on your priority songs</h3>
